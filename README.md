@@ -2,7 +2,30 @@
 
 A full-stack, enterprise-grade Expense Tracking application featuring a dual-role dashboard system (Admin/HR and User), real-time wallet balance management, social-style profile management, and secure transaction logging.
 
-## 🚀 Key Features
+### Deployment on Render
+
+To deploy this application on Render, follow these steps:
+
+#### 1. Backend (Server)
+- **Environment**: Node
+- **Root Directory**: `server`
+- **Build Command**: `npm install && npm run build`
+- **Start Command**: `npm start`
+- **Environment Variables**: Add all variables from `server/.env`.
+
+#### 2. Frontend (Client)
+- **Environment**: Static Site (or Web Service if preferred)
+- **Root Directory**: `client`
+- **Build Command**: `npm install && npm run build`
+- **Publish Directory**: `out` (if static) or `.next` (if Web Service)
+- **Environment Variables**: Add `NEXT_PUBLIC_API_URL` pointing to your backend URL.
+
+> [!IMPORTANT]
+> Ensure you set the `Root Directory` correctly for both services if deploying from this monorepo.
+
+---
+
+### Key Features Summary
 
 ### 👤 User Dashboard
 - **Real-time Wallet**: View your current balance and total amount deposited by the company.
