@@ -9,7 +9,7 @@ To deploy this application on Render, follow these steps:
 #### 1. Backend (Server)
 - **Environment**: Node
 - **Root Directory**: `server`
-- **Build Command**: `npm install && npm run build`
+- **Build Command**: `npm install` (The `postinstall` script will automatically run `npm run build`)
 - **Start Command**: `npm start`
 - **Environment Variables**: Add all variables from `server/.env`.
 
