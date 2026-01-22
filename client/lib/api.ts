@@ -1,6 +1,15 @@
 import { LoginRequest, LoginResponse, Expense, DepositRequest, User } from '@/types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://expense-tracker-22a5.onrender.com/api';
+const getBaseUrl = () => {
+    if (typeof window !== 'undefined') {
+        if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+            return 'http://localhost:10000/api';
+        }
+    }
+    return process.env.NEXT_PUBLIC_API_URL || 'https://expense-tracker-22a5.onrender.com/api';
+};
+
+const API_BASE_URL = getBaseUrl();
 
 // Helper function to get auth token
 const getAuthToken = (): string | null => {
@@ -52,8 +61,15 @@ class ApiService {
         });
 
         if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.message || 'Login failed');
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+                const error = await response.json();
+                throw new Error(error.message || 'Login failed');
+            } else {
+                const errorText = await response.text();
+                console.error('Non-JSON error response:', errorText);
+                throw new Error(`Login failed: Server returned ${response.status} ${response.statusText}`);
+            }
         }
 
         return response.json();
