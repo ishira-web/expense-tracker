@@ -6,7 +6,13 @@ const getBaseUrl = () => {
             return 'http://localhost:10000/api';
         }
     }
-    return process.env.NEXT_PUBLIC_API_URL || 'https://expense-tracker-22a5.onrender.com/api';
+    // Use environment variable if provided and it's an absolute URL, 
+    // otherwise fallback to the hardcoded Render URL for production.
+    const envUrl = process.env.NEXT_PUBLIC_API_URL;
+    if (envUrl && envUrl.startsWith('http')) {
+        return envUrl;
+    }
+    return 'https://expense-tracker-22a5.onrender.com/api';
 };
 
 const API_BASE_URL = getBaseUrl();
