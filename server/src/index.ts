@@ -11,7 +11,7 @@ const PORT = Number(process.env.PORT) || 10000;
 
 // CORS configuration - Allow all in production or specific locally
 app.use(cors({
-    origin: '*',
+    origin: ['*',"https://expense-tracker-pied-seven-71.vercel.app"],
     credentials: true
 }));
 
