@@ -100,7 +100,7 @@ export default function Login() {
                     <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-linear-to-br from-purple-500 to-pink-500 mb-4 shadow-lg shadow-purple-500/30">
                         <Wallet className="w-10 h-10 text-white" />
                     </div>
-                    <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">Expense Tracker</h1>
+                    <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">Carecode Expense Tracker</h1>
                     <p className="text-slate-600 dark:text-purple-200 text-lg">Manage your expenses effortlessly</p>
                 </div>
 
