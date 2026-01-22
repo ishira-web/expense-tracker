@@ -6,12 +6,8 @@ import userRoutes from './route/user.routes';
 dotenv.config();
 
 const app = express();
-const rawPort = process.env.PORT;
-const PORT = parseInt(rawPort as string, 10) || 10000;
+const PORT = 'https://expense-tracker-22a5.onrender.com';
 
-if (isNaN(parseInt(rawPort as string, 10)) && rawPort) {
-    console.warn(`Warning: PORT environment variable is not a number: "${rawPort}". Defaulting to ${PORT}`);
-}
 
 // CORS configuration - Allow all in production or specific locally
 app.use(cors({
