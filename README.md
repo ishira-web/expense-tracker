@@ -1,4 +1,5 @@
 # 💰 Expense Tracker | Admin & User Wallet System
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/ishira-web/expense-tracker?utm_source=oss&utm_medium=github&utm_campaign=ishira-web%2Fexpense-tracker&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
 A full-stack, enterprise-grade Expense Tracking application featuring a dual-role dashboard system (Admin/HR and User), real-time wallet balance management, social-style profile management, and secure transaction logging.
 
