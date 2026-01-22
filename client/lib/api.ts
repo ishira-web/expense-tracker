@@ -1,6 +1,6 @@
 import { LoginRequest, LoginResponse, Expense, DepositRequest, User } from '@/types';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://expense-tracker-22a5.onrender.com';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://expense-tracker-22a5.onrender.com/api';
 
 // Helper function to get auth token
 const getAuthToken = (): string | null => {
