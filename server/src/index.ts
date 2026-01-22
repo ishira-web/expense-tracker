@@ -6,7 +6,7 @@ import userRoutes from './route/user.routes';
 dotenv.config();
 
 const app = express();
-const PORT = Number(process.env.PORT) || 5000;
+const PORT = 10000
 
 // CORS configuration - Allow all in production or specific locally
 app.use(cors({
